@@ -1,27 +1,43 @@
 package com.itheima.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
  * 订单
  */
 @Data
+@TableName("t_order")
 public class Order {
 
+    @TableId(value = "oid",type = IdType.AUTO)
     private Long oid;  //订单id
 
     //用户
-    private Integer uid; //用户id
+    @TableField("user_id")
+    private Integer uid;
 
-    private String username; //用户名
+    //用户名
+    @TableField("user_name")
+    private String username;
 
     //商品相关
-    private Integer pid; //商品id
+    @TableField("pid")
+    private Integer pid;
 
-    private String pname; //商品名称
+    //商品名称
+    @TableField("p_name")
+    private String pname;
 
-    private Double pprece; //商品单价
+    //商品单价
+    @TableField("p_prece")
+    private Double pprece;
 
-    private Integer number; //购买数量
+    //购买数量
+    @TableField("number")
+    private Integer number;
 
 }

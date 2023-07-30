@@ -1,8 +1,8 @@
 server:
-  port: 8081
+  port: 8091
 spring:
   application:
-    name: service-product
+    name: service-order
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
