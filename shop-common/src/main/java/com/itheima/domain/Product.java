@@ -1,23 +1,24 @@
 package com.itheima.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity(name = "shop_product")
 @Data
+@TableName("t_product")
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(value = "pid",type = IdType.AUTO)
     private Integer pid;
 
+    @TableField("p_name")
     private String pname;
 
+    @TableField("p_price")
     private Double pprice;
 
+    @TableField("p_stock")
     private Integer stock;
 }

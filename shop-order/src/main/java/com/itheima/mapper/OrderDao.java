@@ -1,8 +1,8 @@
-package com.itheima.dao;
+package com.itheima.mapper;
 
 import com.itheima.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductDao extends JpaRepository<Product,Integer> {
+public interface OrderDao extends JpaRepository<Product,Integer> {
 
 }

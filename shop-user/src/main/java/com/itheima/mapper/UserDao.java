@@ -1,4 +1,4 @@
-package com.itheima.dao;
+package com.itheima.mapper;
 
 import com.itheima.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
