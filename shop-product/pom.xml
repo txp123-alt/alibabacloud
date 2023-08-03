@@ -20,5 +20,6 @@
             <artifactId>shop-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--nacos client-->
     </dependencies>
 </project>
